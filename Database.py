@@ -8,7 +8,7 @@ def add_to_database():
     if entry_text:
         try:
             # Connect to the SQLite database
-            connection = sqlite3.connect('your_database.db')
+            connection = sqlite3.connect('databaseEx.db')
             cursor = connection.cursor()
 
             # Create the table if it doesn't exist
@@ -36,7 +36,7 @@ def add_to_database():
 def delete_entry(entry_id):
     try:
         # Connect to the SQLite database
-        connection = sqlite3.connect('your_database.db')
+        connection = sqlite3.connect('databaseEx.db')
         cursor = connection.cursor()
 
         # Delete the selected entry
@@ -56,7 +56,7 @@ def delete_entry(entry_id):
 def view_entries():
     try:
         # Connect to the SQLite database
-        connection = sqlite3.connect('your_database.db')
+        connection = sqlite3.connect('databaseEx.db')
         cursor = connection.cursor()
 
         # Check if the table exists
@@ -110,7 +110,7 @@ entry = tk.Entry(root, width=20, font=('Courier New', 14), bg='black', fg='white
 entry.pack(side=tk.LEFT, pady=10)
 
 # Create and pack the "Add to Database" button
-add_button = tk.Button(root, text='Add to Dictionary', command=add_to_database, bg='#008080', fg='white', font=('Courier New', 12), relief=tk.GROOVE)
+add_button = tk.Button(root, text='Add to Database', command=add_to_database, bg='#008080', fg='white', font=('Courier New', 12), relief=tk.GROOVE)
 add_button.pack(side=tk.LEFT, pady=10)
 
 # Create a text widget to display entries
